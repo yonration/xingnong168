@@ -1,0 +1,105 @@
+.footer {
+    width: 100%;
+    position: relative;
+}
+.footer .wrapper {
+    width: 1200px;
+    margin: 0 auto;
+    font-size: 12px;
+    border-top: 1px solid #f2f2f2;
+    padding: 20px 0 10px;
+}
+.footer .wrapper::after{
+    content: "020";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    overflow: hidden;
+}
+@media (max-width:1279px) {
+	.footer .wrapper {
+        width: 100%;
+	}
+}
+@media (max-width:550px) {
+    .footer .wrapper {
+        text-align: center;
+    }
+}
+.footer .wrapper .copyright {
+    width: 866px;
+    display: inline-block;
+    box-sizing: border-box;
+    line-height: 30px;
+}
+@media (max-width:1279px) {
+	.footer .wrapper .copyright {
+        padding: 0 20px;
+	}
+}
+@media (max-width:1199px) {
+    .footer .wrapper .copyright {
+        width: 463px;
+        padding: 0 20px;
+    }
+	.footer .wrapper .copyright .cut {
+        display: none;
+	}
+}
+@media (max-width:550px) {
+    .footer .wrapper .copyright {
+        width: 100%;
+        padding: 0 20px;
+    }
+	.footer .wrapper .copyright .cut {
+        display: inline;
+	}
+}
+.footer .wrapper a {
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color .4s ease;
+}
+.footer .wrapper a:hover {
+    color: #b2b2b2;
+}
+.footer .wrapper .copyright a.gswj {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background: center no-repeat url("https://s2.ax1x.com/2019/06/05/VUu6HO.png");
+    background-size: contain;
+    vertical-align: middle;
+}
+.footer .wrapper .qr {
+    float: right;
+    line-height: 30px;
+    position: relative;
+}
+@media (max-width:1279px) {
+	.footer .wrapper .qr {
+        padding: 0 20px;
+	}
+}
+@media (max-width:550px) {
+    .footer .wrapper .qr {
+        float: none;
+	}
+}
+.footer .wrapper .qr img {
+    width:129px;
+    height: 129px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -64.5px;
+    z-index: 9;
+}
+@media (max-width:1279px) and (min-width:551px) {
+	.footer .wrapper .qr img {
+        margin-left: -105px;
+	}
+}

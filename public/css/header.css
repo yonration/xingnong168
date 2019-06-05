@@ -1,0 +1,276 @@
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Avenir Next ST", "Microsoft YaHei", "PingFang SC", sans-serif;
+    height: auto;
+}
+html.limit {
+    position: fixed;
+    height: 100%;
+    overflow: hidden;
+}
+.header {
+    position: relative;
+    width: 100%;
+    height: 44px;
+    background-color: rgba(26,26,26,.9);
+    font-size: 14px;
+    z-index: 999;
+}
+@media (max-width:767px) {
+    .header {
+        height: 55px;
+    }
+}
+.nav {
+    position: relative;
+    z-index: 2;
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+}
+@media (max-width:1279px) {
+	.nav {
+		width: 100%;
+	}
+}
+@media (max-width:767px) {
+    .nav {
+        border-bottom: 1px solid #262626;
+    }
+}
+.nav .menu {
+    position: absolute;
+    width: 55px;
+    height: 100%;
+    left: 0;
+    text-align: center;
+    vertical-align: middle;
+    z-index: 9;
+    display: none;
+}
+@media (max-width:767px) {
+    .nav .menu {
+        display: inline-block;
+    }
+    .nav .menu span {
+        position: absolute;
+        width: 19px;
+        height: 1px;
+        left: 50%;
+        margin-left: -10px;
+        background-color: #fff;
+        transition: transform .4s ease-out, opacity .2s;
+    }
+    .nav .menu span.menu-top {
+        top: 19px;
+    }
+    .nav.open .menu span.menu-top {
+        transform: translate3d(0, 8px, 0) rotate(45deg);
+    }
+    .nav .menu span.menu-middle {
+        top: 27px;
+    }
+    .nav.open .menu span.menu-middle {
+        opacity: 0;
+        transform: translate3d(-20px, 0, 0);
+    }
+    .nav .menu span.menu-bottom {
+        top: 35px;
+    }
+    .nav.open .menu span.menu-bottom {
+        transform: translate3d(0, -8px, 0) rotate(-45deg);
+    }
+}
+.nav .list {
+    height: 100%;
+    width: 100%;
+    padding: 0 100px;
+    box-sizing: border-box;
+}
+@media (max-width:1279px) {
+	.nav div.list {
+        text-align: center;
+        padding: 0;
+	}
+}
+@media (max-width:767px) {
+    .nav .list {
+        padding: 0;
+        font-family: "Avenir Next ST","Microsoft YaHei","PingFang SC";
+        margin: auto;
+        color: #fff;
+        display: block;
+        text-align: center;
+        width: 100%;
+        height: 0;
+        background-color: #0d0d0d;
+        top: 56px;
+        position: absolute;
+        overflow: hidden;
+    }
+    .nav.open .list {
+        position: fixed;
+        bottom: 0;
+        height: auto;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+}
+.nav .list ul {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+.nav .list ul li {
+    list-style: none;
+    display: table-cell;
+}
+@media (max-width:767px) {
+    .nav .list ul {
+        width: 100%;
+        height: 100%;
+    }
+    .nav .list ul li {
+        width: 100%;
+        display: block;
+    }
+}
+.nav .list ul li a {
+    padding: 0 22px;
+    line-height: 44px;
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    transition: color .4s ease;
+    cursor: pointer;
+}
+@media (max-width:767px) {
+	.nav .list ul li a {
+        margin: 0 10%;
+        line-height: 49px;
+        border-bottom: 1px solid #262626;
+	}
+}
+.nav .list ul li.current a {
+    color: #b2b2b2;
+}
+.nav .logo {
+    position: absolute;
+}
+@media (max-width:767px) {
+    .nav .logo {
+        left: 50%;
+        margin-left: -48.125px;
+    }
+}
+.nav .logo a {
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+@media (max-width:1279px) {
+	.nav .logo a {
+        padding: 0 20px;
+	}
+}
+.nav .logo a img {
+    height: 44px;
+}
+@media (max-width:767px) {
+    .nav .logo a img {
+        height: 55px;
+    }
+}
+.nav .about {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.nav .about a {
+    line-height: 44px;
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    transition: color .4s ease;
+    cursor: pointer;
+}
+@media (max-width:1279px) {
+	.nav .about a {
+        padding: 0 20px;
+	}
+}
+@media (max-width:767px) {
+    .nav .about a {
+        line-height: 55px;;
+    }
+}
+.nav .about:hover a {
+    color: #b2b2b2;
+}
+.box {
+    position: relative;
+    background-color: rgba(26,26,26,.9);
+    color: #b2b2b2;
+    height: 190px;
+    font-size: 14px;
+    z-index: 1;
+    visibility: hidden;
+}
+@media (max-width:1279px) {
+    .box {
+        display: none;
+    }
+}
+.box .series, .box .products {
+    position: absolute;
+    width: 1200px;
+    height: 190px;
+    left: 50%;
+    margin-left: -600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    z-index: 1;
+}
+.box .series .item, .box .products .item{
+    width: 176px;
+    height: 100%;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+.box .products .item a {
+    width: 176px;
+    height: 176px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    color: #b2b2b2;
+    position: relative;
+    margin-bottom: 14px;
+}
+.box .products .item a img {
+    width: 176px;
+    height: 176px;
+    display: block;
+    position: absolute;
+}
+.box .products .item a span {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    text-align: center;
+    width: 100%;
+    line-height: 20px;
+}
+.box .series .item ul {
+    height: 176px;
+    margin: 0 0 14px;
+    padding-left: 22px;
+    border-left: 1px solid rgba(255, 255, 255, .2);
+    list-style: none;
+}
+.box .series .item ul li {
+    line-height: 35.2px;
+}

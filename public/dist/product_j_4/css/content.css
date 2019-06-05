@@ -1,0 +1,48 @@
+.content .stage:nth-child(1) {
+    background-color: #f6f6f6;
+}
+.content .stage:nth-child(2) {
+    background-image: linear-gradient(145deg,#438de2 10%,#65d6e9 90%);
+}
+.content .stage:nth-child(3) {
+    background-color: #e9fbfd;
+}
+.content .stage:nth-child(4) {
+    background-color: #f6f0ef;
+}
+.content .stage:nth-child(5) {
+    background-color: #9e1c1c;
+}
+.content .stage .title h2 {
+    color: #1a1a1a;
+}
+.content .stage .title h3 {
+    color: #1a1a1a;
+}
+.content .stage .title p {
+    color: #585858;
+}
+.content .stage .figure {
+    height: 0;
+    padding-bottom: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    transition: all 1s;
+}
+.content .stage:nth-child(1) .figure {
+    background-image: url(../img/s4-phone.png);
+    background-position: center;
+}
+.content .stage:nth-child(2) .figure {
+    background-image: url(../img/s2-phone.png);
+}
+.content .stage:nth-child(3) .figure {
+    background-image: url(../img/s2-phone.png);
+}
+.content .stage:nth-child(4) .figure {
+    background-image: url(../img/s2-phone.png);
+}
+.content .stage:nth-child(5) .figure {
+    background-image: url(../img/s2-phone.png);
+}

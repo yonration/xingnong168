@@ -1,0 +1,14 @@
+.content {
+    padding-top: 64px;
+}
+.content .section {
+    margin: 0 auto;
+    width: 960px;
+    box-sizing: border-box;
+}
+@media (max-width:1024px) {
+	.content .section {
+        padding: 0 32px;
+        width: 100%;
+	}
+}

@@ -1,0 +1,127 @@
+.content .wrapper {
+	margin: 0 auto;
+	width: 1200px;
+	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+@media only screen and (max-width: 1199px) {
+	.content .wrapper {
+		width: 100%;
+	}
+}
+.shadow {
+	position: relative;
+	flex-basis: 280px;
+	margin: 20px;
+}
+.shadow:before, .shadow:after{
+	content: "";
+    position: absolute; 
+    left: 35px;  
+    right: 35px;
+	top: 20px;
+	bottom: 20px;  
+    background: transparent; 
+    box-shadow: 0 20px 15px rgba(0,0,0,0.7);  
+    z-index: -1; 
+    background: #fff;
+}
+.shadow:before{  
+    transform: skew(-12deg) rotate(-4deg); 
+}
+.shadow:after{ 
+    transform: skew(12deg) rotate(4deg);
+}
+.single-member {
+	background-color: #f6f6f6;
+	text-align: center;
+}
+.member-image img {
+	max-width: 100%;
+	height: 100%;
+	vertical-align: middle;
+}
+h3 {
+	font-size: 24px;
+	font-weight: normal;
+	margin: 10px 0 0;
+	text-transform: uppercase;
+}
+h5 {
+	font-size: 16px;
+	font-weight: 300;
+	margin: 0 0 15px;
+	line-height: 22px;
+}
+p {
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 22px;
+	padding: 0 30px;
+	margin-bottom: 10px;
+	height: 88px;
+}
+.social-touch a {
+	display: inline-block;
+	line-height: 26px;
+	vertical-align: middle;
+	margin: 0 2px;
+	background-repeat: no-repeat;
+	opacity: 0.7;
+	transition: 0.3s;
+	text-decoration: none;
+	font-size: 14px;
+	color: #1e1e1e;
+}
+.social-touch a:hover {
+	opacity: 1;
+	transition: 0.3s;
+}
+.effect-3 {
+	max-height: 302px;
+	min-height: 302px;
+	overflow: hidden;
+}
+.effect-3 h3 {
+	padding-top: 7px;
+	line-height: 33px;
+}
+.effect-3 .member-image {
+	border-bottom: 5px solid #eb7f0f;
+	transition: 0.4s;
+	height: 212px;
+	width: 100%;
+	display: inline-block;
+	float: none;
+	vertical-align: middle;
+}
+.effect-3 .member-info {
+	transition: 0.4s;
+}
+.effect-3 .member-image img {
+	width: 100%;
+	vertical-align: bottom;
+}
+.effect-3 .social-touch {
+	background: #eb7f0f;
+	float: left;
+	left: 0;
+	bottom: 0;
+	overflow: hidden;
+	padding: 5px 0;
+	width: 100%;
+	transition: 0.4s;
+}
+.effect-3.hover .member-image {
+	border-bottom: 0;
+	border-radius: 0 0 50px 50px;
+	height: 81px;
+	display: inline-block;
+	overflow: hidden;
+	width: 109px;
+	transition: 0.6s;
+}
